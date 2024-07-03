@@ -4,6 +4,7 @@ import random
 import threading
 import base64
 import os
+import sys
 
 import requests
 
@@ -89,6 +90,7 @@ def test_network():
 
 def log(msg):
     print("{time}: {msg}".format(time=datetime.datetime.now(), msg=msg))
+    sys.stdout.flush()  # 确保立即刷新输出缓冲区
 
 def start_making_request():
 
