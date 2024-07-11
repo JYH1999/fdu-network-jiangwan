@@ -91,6 +91,8 @@ schedule.every().day.at("03:14").do(relogin)
 
 if __name__ == '__main__':
     log("Start network auth program")
+    log("Relogin at startup:")
+    relogin()
     while True:
         schedule.run_pending()
         time.sleep(1)
